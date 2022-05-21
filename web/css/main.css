@@ -4,9 +4,14 @@ body {
 
 header {
     display: flex;
-    align-items: flex-start;
+    margin-left: 3rem;
+    align-items: baseline;
     margin-bottom: 2rem;
     color: #477785;
+}
+
+header h1 {
+    margin-left: 1rem;
 }
 
 .formContainer {
