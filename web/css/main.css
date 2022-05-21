@@ -1,0 +1,28 @@
+body {
+    background-color: #E0F8FF;
+}
+
+header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    color: #477785;
+}
+
+.formContainer {
+    width: 15vw;
+}
+
+.formContainer p {
+    color: #477785;
+}
+
+form {
+    display: flex;
+    
+}
+
+button {
+    background-color: #477785;
+    color: white;
+}
