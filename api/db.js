@@ -33,4 +33,19 @@ async function getShortLinkID(orgLink) {
 }
 
 
-module.exports = { getShortLinkID }
+async function getOriginalLink(shortLinkID) {
+  try {
+    await client.connect();
+    const database = client.db('linkshortener');
+    const links = database.collection('links');
+    const query = { shortLinkID: shortLinkID };
+    const link = await links.findOne(query);
+
+    return link.orgLink;
+  } finally {
+    await client.close();
+  }
+}
+
+
+module.exports = { getShortLinkID, getOriginalLink }
