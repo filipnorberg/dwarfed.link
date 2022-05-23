@@ -13,5 +13,5 @@ formElement.addEventListener('submit', async (event) => {
         body: JSON.stringify(data)
     });
     const responseJSON = await response.json();
-    console.log(responseJSON);
+    console.log(responseJSON.shortLinkID);
 })
