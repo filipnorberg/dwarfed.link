@@ -17,6 +17,7 @@ formElement.addEventListener('submit', async (event) => {
     });
     const responseJSON = await response.json();
     console.log(responseJSON.shortLinkID);
-    textDiv.innerHTML += "dwarfed.link/" + responseJSON.shortLinkID.toString();
+    const adress = window.location.href.split("//")[1]
+    textDiv.textContent = adress + responseJSON.shortLinkID;
     shortLinkContainer.style.display = "block";
 })
