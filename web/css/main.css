@@ -14,28 +14,91 @@ header {
     margin-left: auto;
     margin-right: auto;
     align-items: baseline;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
     color: #477785;
 }
 
 header h1 {
     margin-right: 4rem;
+    font-size: 2rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
 }
 
 .formContainer {
     width: 15vw;
+    margin-bottom: 10vh;
 }
 
 .formContainer p {
     color: #477785;
 }
 
+.shortLinkContainer {
+    display: none;
+    color: #477785;
+    height: 5vh;
+}
+
+.shortLink {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.linkText {
+    background-color: #C9E5ED;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5vw;
+}
+
 form {
     display: flex;
-    
+    height: 5vh;
+}
+
+input {
+    outline: none;
+    border: none;
+    min-width: 18vw;
+    padding-left: 1rem;
+    max-height: 100%;
+    margin-right: 0.5vw;
 }
 
 button {
     background-color: #477785;
     color: white;
+    border: none;
+    min-width: 6vw;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transition: 0.3s;
+    background-color: #79AAB9;
+}
+
+.playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+}
+
+.robotoBold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: medium;
 }

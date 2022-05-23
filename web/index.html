@@ -7,22 +7,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>dwarfed.link</h1>
-        <h2>Shorten your links for easier sharing</h2>
+        <h1 class="playfair">dwarfed.link</h1>
+        <h2 class="playfair">Shorten your links for easier sharing</h2>
     </header>
     <div class="container">
         <div class="formContainer">
-            <p>Paste the link to shorten.</p>
+            <p class="robotoBold">Paste the link to shorten.</p>
             <form id="linkForm">
-                <input id="linkInput" type="url" placeholder="www.example.com/dhlkujgsdfkjjdsjmsdvb"/>
-                <button type="submit">Shorten</button>
+                <input class="roboto" id="linkInput" type="url" placeholder="www.example.com/dhlkujgsdfkjjdsjmsdvb"/>
+                <button class="robotoBold" type="submit">Shorten</button>
             </form>
+        </div>
+        <div id="shortLinkContainer" class="shortLinkContainer">
+            <p class="robotoBold">Here's your new link!</p>
+            <div class="shortLink">
+                <div id="linkText" class="linkText robotoBold">
+
+                </div>
+                <button class="robotoBold" type="submit">Copy</button>
+            </div>
         </div>
     </div>
 </body>
