@@ -1,7 +1,8 @@
 const formElement = document.getElementById('linkForm');
 const inputElement = document.getElementById('linkInput');
-const textDiv = document.getElementById('linkText');
-const shortLinkContainer = document.getElementById('shortLinkContainer');
+const linkElement = document.getElementById('linkText');
+const shortLinkElement = document.getElementById('shortLinkContainer');
+const copyElement = document.getElementById('copy');
 
 formElement.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -16,8 +17,14 @@ formElement.addEventListener('submit', async (event) => {
         body: JSON.stringify(data)
     });
     const responseJSON = await response.json();
-    console.log(responseJSON.shortLinkID);
     const adress = window.location.href.split("//")[1]
-    textDiv.textContent = adress + responseJSON.shortLinkID;
-    shortLinkContainer.style.display = "block";
+    linkElement.textContent = adress + responseJSON.shortLinkID;
+    shortLinkElement.style.display = "block";
 })
+
+
+copyElement.addEventListener('click', (event) => {
+    linkElement.focus();
+    navigator.clipboard.writeText(linkElement.textContent);
+    copyElement.textContent = "Copied!";
+});
