@@ -17,8 +17,8 @@
         <h1>dwarfed.link</h1>
         <h2>Shorten your links for easier sharing</h2>
     </header>
-    <div class="container">
-        <div class="formContainer">
+    <main class="container">
+        <div class="content">
             <p class="robotoBold">Paste the link to shorten.</p>
             <form id="linkForm">
                 <input class="roboto" id="linkInput" placeholder="https://example.com/" autocomplete="off"/>
@@ -27,16 +27,19 @@
             <div class="error">
                 <p class="errorMessage" id="error">Please insert a valid URL</p>
             </div>
-        </div>
-        <div id="shortLinkContainer" class="shortLinkContainer">
-            <p class="robotoBold">Here's your new link!</p>
-            <div class="shortLink">
-                <div id="linkText" class="linkText robotoBold">
+            <div class="shortLinkWrapper">
+                <p class="robotoBold">Here's your new link!</p>
+                <div class="shortLink">
+                    <div id="linkText" class="linkText robotoBold">
 
+                    </div>
+                    <button id="copy" class="robotoBold" type="submit">Copy</button>
                 </div>
-                <button id="copy" class="robotoBold" type="submit">Copy</button>
             </div>
         </div>
-    </div>
+    </main>
+    <footer>
+        <a href="https://github.com/filipnorberg/dwarfed.link">Check out my github repo</a>
+    </footer>
 </body>
 </html>

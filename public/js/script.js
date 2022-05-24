@@ -1,7 +1,7 @@
 const formElement = document.getElementById('linkForm');
 const inputElement = document.getElementById('linkInput');
 const linkElement = document.getElementById('linkText');
-const shortLinkElement = document.getElementById('shortLinkContainer');
+const shortLinkElement = document.getElementById('shortLinkWrapper');
 const copyElement = document.getElementById('copy');
 const errorElement = document.getElementById('error');
 

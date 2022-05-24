@@ -1,25 +1,21 @@
 body {
     background-color: #E0F8FF;
     font-family: Roboto, sans-serif;
-}
-
-
-.container {
-    max-width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 100vh;
+    color: #477785;
 }
 
 
 header {
     display: flex;
     font-family: Playfair Display, serif;
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
     align-items: baseline;
     margin-bottom: 6rem;
-    color: #477785;
 }
 
 
@@ -34,20 +30,22 @@ header h2 {
 }
 
 
-.formContainer {
-    width: 15vw;
-    margin-bottom: 10vh;
+footer {
+    padding-bottom: 2rem;
+    display: flex;
 }
 
 
-p {
-    color: #477785;
+footer a {
+    font-weight: 700;
+    color: inherit;
 }
 
 
-.shortLinkContainer {
-    display: none;
-    color: #477785;
+.container {
+    flex-grow: 1;
+    padding: 0 12rem;
+
 }
 
 
@@ -58,30 +56,35 @@ p {
 }
 
 
+.shortLinkWrapper {
+    display: none;
+}
+
+
 .linkText {
     background-color: #C9E5ED;
-    padding-left: 1rem;
-    padding-right: 1rem;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 0.5vw;
+    margin-right: 0.5rem;
+    padding: 20px;
 }
 
 
 form {
     display: flex;
+    max-width: 40rem;
 }
 
 
 input {
     outline: none;
+    display: block;
     border: none;
-    min-width: 25vw;
-    padding-left: 1rem;
-    max-height: 100%;
-    margin-right: 0.5vw;
+    padding: 20px;
+    margin-right: 0.5rem;
+    flex-grow: 1;
 }
 
 
@@ -123,4 +126,33 @@ button:hover {
 .robotoBold {
     font-weight: 700;
     font-size: medium;
+}
+
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input {
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .shortLink {
+        flex-direction: column;
+    }
+
+    .linkText {
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
 }
