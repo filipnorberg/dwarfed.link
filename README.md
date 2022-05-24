@@ -1,3 +1,3 @@
-# Linkshortener
+# dwarfed.link
 
-My attempt at making a linkshortener.
+The official git repo for dwarfed.link. The world famous link shortener! 😎😎😎
