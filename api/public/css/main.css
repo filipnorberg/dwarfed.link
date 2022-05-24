@@ -5,7 +5,7 @@ body {
 
 
 .container {
-    max-width: 80%;
+    max-width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -78,7 +78,7 @@ form {
 input {
     outline: none;
     border: none;
-    min-width: 18vw;
+    min-width: 25vw;
     padding-left: 1rem;
     max-height: 100%;
     margin-right: 0.5vw;
