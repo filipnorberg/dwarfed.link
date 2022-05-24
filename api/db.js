@@ -18,7 +18,7 @@ async function getShortLinkID(orgLink) {
     const link = await links.findOne(query);
 
     if (link == null) {
-      const newShortID = chance.string({ length: 8, pool: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"});
+      const newShortID = chance.string({ length: 6, pool: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"});
       await links.insertOne(
         { orgLink: orgLink, shortLinkID: newShortID }
       );

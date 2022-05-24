@@ -1,5 +1,6 @@
 body {
     background-color: #E0F8FF;
+    font-family: Roboto, sans-serif;
 }
 
 
@@ -12,6 +13,7 @@ body {
 
 header {
     display: flex;
+    font-family: Playfair Display, serif;
     max-width: 95%;
     margin-left: auto;
     margin-right: auto;
@@ -38,7 +40,7 @@ header h2 {
 }
 
 
-.formContainer p {
+p {
     color: #477785;
 }
 
@@ -83,6 +85,19 @@ input {
 }
 
 
+.error {
+    height: 16px;
+    margin-top: 16px;
+}
+
+
+.errorMessage {
+    color: red;
+    display: none;
+    margin: 0;
+}
+
+
 button {
     background-color: #477785;
     color: white;
@@ -100,19 +115,12 @@ button:hover {
 }
 
 
-.playfair {
-    font-family: 'Playfair Display', serif;
-}
-
-
 .roboto {
-    font-family: 'Roboto', sans-serif;
     font-size: medium;
 }
 
 
 .robotoBold {
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: medium;
 }

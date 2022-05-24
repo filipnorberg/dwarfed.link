@@ -14,8 +14,8 @@
 </head>
 <body>
     <header>
-        <h1 class="playfair">dwarfed.link</h1>
-        <h2 class="playfair">Shorten your links for easier sharing</h2>
+        <h1>dwarfed.link</h1>
+        <h2>Shorten your links for easier sharing</h2>
     </header>
     <div class="container">
         <div class="formContainer">
@@ -24,6 +24,9 @@
                 <input class="roboto" id="linkInput" placeholder="www.example.com/dhlkujgsdfkjjdsjmsdvb"/>
                 <button class="robotoBold" type="submit">Shorten</button>
             </form>
+            <div class="error">
+                <p class="errorMessage" id="error">Please insert a valid URL</p>
+            </div>
         </div>
         <div id="shortLinkContainer" class="shortLinkContainer">
             <p class="robotoBold">Here's your new link!</p>

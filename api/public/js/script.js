@@ -3,12 +3,18 @@ const inputElement = document.getElementById('linkInput');
 const linkElement = document.getElementById('linkText');
 const shortLinkElement = document.getElementById('shortLinkContainer');
 const copyElement = document.getElementById('copy');
+const errorElement = document.getElementById('error');
 
 formElement.addEventListener('submit', async (event) => {
     event.preventDefault();
+    const regEx = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g
+    if (!regEx.test(inputElement.value)) {
+        errorElement.style.display = "block";
+        return;
+    }
     const data = { orgLink: inputElement.value }
 
-    const response = await fetch("http://localhost:3000/links", {
+    const response = await fetch("/links", {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -20,7 +26,12 @@ formElement.addEventListener('submit', async (event) => {
     const adress = window.location.href.split("//")[1]
     linkElement.textContent = adress + responseJSON.shortLinkID;
     shortLinkElement.style.display = "block";
-})
+});
+
+
+inputElement.addEventListener('input', (event) => {
+    errorElement.style.display = "";
+});
 
 
 copyElement.addEventListener('click', (event) => {
