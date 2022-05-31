@@ -6,7 +6,10 @@
 
 var app = require('../app');
 var debug = require('debug')('linkshortener:server');
-var http = require('http');
+var https = require('https');
+const fs = require('node:fs');
+const privateKey = fs.readFileSync('./cert/dwarfed_link.key');
+const certificate = fs.readFileSync('./cert/dwarfed_link.crt');
 
 /**
  * Get port from environment and store in Express.
@@ -19,7 +22,10 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = https.createServer({
+  key: privateKey,
+  cert: certificate 
+}, app);
 
 /**
  * Listen on provided port, on all network interfaces.
