@@ -23,7 +23,7 @@ formElement.addEventListener('submit', async (event) => {
         body: JSON.stringify(data)
     });
     const responseJSON = await response.json();
-    const adress = window.location.href.split("//")[1]
+    const adress = window.location.href.replace("www.", "");
     linkElement.textContent = adress + responseJSON.shortLinkID;
     shortLinkElement.style.display = "block";
 });
